@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Montserrat:wght@300&display=swap');
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#main > main {
+    flex: 1;
+    background-color: violet;
+}
+
+#main > nav, 
+#main > aside {
+    flex: 0 0 20vw;
+    background: rgb(66, 66, 65);
+}
+
+#main > nav {
+    order: -1;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+header {
+    background: blueviolet;
+    height: 15vh;
+}
+
+header, footer, main, nav, aside {
+    padding: 1em;
+}
+
+.main-nav {
+    display: flex;
+    background: rgb(177, 35, 35);
+    border-radius: 3px;
+    padding: 1em;
+    font-family: sans-serif;
+}
+
+.main-nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 3;
+}
+
+.main-nav li {
+    margin-right: 1em;
+}
+  
+.main-nav > form {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.main-nav input {
+    flex: 1;
+}
+
+.main-nav button {
+    background: rgb(133, 4, 4);
+    border: 0;
+    border-radius: 1em;
+    padding: 0 1em;
+    margin-left: .3em;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    /* flex: 0 0 200px; */
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+} 
+
+.card img {
+    max-width: 100%;
+}
+
+.card .text {
+    padding: 0 20px 20px;
+}
+
+.card .text > button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.card:nth-child(2) {
+    width: 420px;
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+    background: #424241;
+    padding: 1em;
+    border-radius: 3px;
+    min-width: 100%;
+    flex-direction: column;
+}
+
+.media-object {
+    margin-right: 1em;
+}
+
+.media-body {
+    flex: 1;
+}
+
+.media-heading {
+    margin: 0 0 .5em;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .main-nav {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        flex-direction: row; /* Change this to 'column' to stack the links */
+        margin-bottom: 1em;
+    }
+}
+
+@media (min-width: 600px) {
+    #main {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    #main > main {
+        flex: 1;
+    }
+    
+    #main > nav, 
+    #main > aside {
+        /* 12em is the width of the columns */
+        flex: 0 0 12em;
+    }
+}
